@@ -325,9 +325,27 @@ html, body {
     opacity: 0;
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
+@keyframes fadeInUpBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.03);
+  }
+  80% {
+    transform: translateY(4px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
 .hero-card.visible {
     transform: translateY(0);
     opacity: 1;
+    animation: fadeInUpBounce 0.7s cubic-bezier(.23,1.02,.57,1.01);
 }
 .hero-card:hover {
     transform: translateY(-5px);
